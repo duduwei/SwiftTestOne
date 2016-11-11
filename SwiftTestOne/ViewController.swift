@@ -45,15 +45,15 @@ class ViewController: UIViewController {
         print("xc=",xc)
         
         //创建第一个按钮
-        let bton1 = UIButton(frame: CGRectMake(100,100,50,20))
-        bton1.backgroundColor = UIColor.blackColor()
-        bton1.setTitle("xxxx", forState: UIControlState.Normal)
-        bton1.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        let bton1 = UIButton(frame: CGRect(x: 100,y: 100,width: 50,height: 20))
+        bton1.backgroundColor = UIColor.black
+        bton1.setTitle("xxxx", for: UIControlState())
+        bton1.setTitleColor(UIColor.white, for: UIControlState())
         self.view.addSubview(bton1)
         
 //        image1?.frame = CGRectMake(bton1.frame.origin.x, bton1.frame.origin.y+30, 50, 50)
-        image1?.frame = CGRectMake(100, 140, 50, 50)
-        image1?.backgroundColor = UIColor.orangeColor()
+        image1?.frame = CGRect(x: 100, y: 140, width: 50, height: 50)
+        image1?.backgroundColor = UIColor.orange
 //        self.view.addSubview(image1!)
         //初始化出来，为什么？
         
@@ -91,7 +91,7 @@ class ViewController: UIViewController {
     }
 
     /*func 1*/
-    func givemeBunber(number1:Int,number2:Int)->Int{
+    func givemeBunber(_ number1:Int,number2:Int)->Int{
         
         var numberx = 0;
         numberx = number1+number2;
@@ -100,9 +100,9 @@ class ViewController: UIViewController {
     }
     
     /*func 2*/
-    func anotherNumber()->(Int -> Int){
+    func anotherNumber()->((Int) -> Int){
         
-        func exo(number:Int) -> Int{
+        func exo(_ number:Int) -> Int{
             return 1+number;
         }
         
